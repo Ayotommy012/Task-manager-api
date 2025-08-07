@@ -162,9 +162,4 @@ MIT
 
 ---
 
-### ✅ Final Step
-
-Save the above content in a file named `README.md` at the **root** of your project folder.
-
-Let me know if you'd like to generate a Postman environment file, or push everything to GitHub — we can finish strong.
 ```
