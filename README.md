@@ -68,7 +68,7 @@ If you want to integrate migrations, consider using Sequelize CLI in future proj
 Make sure your PostgreSQL server is running, then:
 
 ```bash
-npm start
+npm run dev
 ```
 
 This will run your app using Node and connect it to your local PostgreSQL database.
@@ -123,7 +123,7 @@ Use Postman or cURL to test the following endpoints:
 This project uses **Jest** to unit test all repository functions.
 
 ```bash
-npm test
+node --experimental-vm-modules node_modules/jest/bin/jest.js
 ```
 
 This runs the test suite located in `app/test/task.test.js`, covering:
