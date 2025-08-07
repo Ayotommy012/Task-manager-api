@@ -140,7 +140,7 @@ All database calls are mocked using `jest.mock()`.
 
 ## 📘 API Documentation (Postman)
 
-* 👉 [Click here to view Postman API Documentation](https://ayotommy012-4288519.postman.co/workspace/Tomiwa's-Workspace~7c052598-ca3f-41db-868b-f30a24ed4ad1/collection/47120294-62b2d457-ece3-4d03-8590-884df4d2a990?action=share&source=copy-link&creator=47120294)
+* 👉 [Click here to view Postman API Documentation] [https://documenter.getpostman.com/view/47120294/2sB3BANZ1W]
 
 This includes all endpoints, request bodies, responses, and status codes. You can also **import the collection** into Postman.
 
