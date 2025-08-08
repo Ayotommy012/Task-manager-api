@@ -60,7 +60,7 @@ app.get('/task/:id', async (req, res) => {
 app.put('/task/:id', async (req, res) => {
   const { error, value } = createTaskSchema.validate(req.body);
   if (error) {
-    return res.status(400).send("input validation error");
+    return res.status(400).send(error);
   }
 
   const { title, description, status, due_date } = value;
@@ -103,5 +103,6 @@ app.delete('/task/:id', async (req, res) => {
     return res.status(500).send("internal server error");
   }
 });
+
 
 export default app;
