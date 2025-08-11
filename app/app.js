@@ -31,7 +31,7 @@ app.get('/tasks', async (req, res) => {
 app.post('/task', async (req, res) => {
     const { error, value } = createTaskSchema.validate(req.body);
     if (error) {
-        return res.status(400).send("input validation error");
+        return res.status(400).send(error);
     }
     const { title, description, status, due_date } = value;
      try {
@@ -39,7 +39,7 @@ app.post('/task', async (req, res) => {
        return res.status(201).send(task);
     } catch (error) {
         console.log(error);
-       return res.status(500).send("internal server error");
+       return res.status(500).send(error);
     }
 })
 
@@ -54,7 +54,7 @@ app.get('/task/:id', async (req, res) => {
        return res.status(404).send("task not found");
     } catch (error) {
         console.log(error);
-       return res.status(500).send("internal server error");
+       return res.status(500).send(error);
     }
 })
 app.put('/task/:id', async (req, res) => {
@@ -83,7 +83,7 @@ app.put('/task/:id', async (req, res) => {
     return res.status(200).json({ message: "task updated", id: taskid });
   } catch (error) {
     console.error("UPDATE ERROR:", error);
-    return res.status(500).send("internal server error");
+    return res.status(500).send(error);
   }
 });
 
@@ -100,8 +100,10 @@ app.delete('/task/:id', async (req, res) => {
     return res.status(200).json({ message: "task deleted", id: taskid });
   } catch (error) {
     console.error("DELETE ERROR:", error);
-    return res.status(500).send("internal server error");
+    return res.status(500).send(error);
   }
 });
 
+
 export default app;
+
